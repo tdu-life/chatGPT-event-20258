@@ -1,0 +1,90 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
+  background-color: #fdf6f0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  position: relative;
+}
+
+/* 右上の画像 */
+.top-image {
+  float: right;
+  width: 250px;
+  margin: 0 0 20px 20px;
+}
+
+.top-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  color: #4b3f39;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+.card {
+  background-color: #fff;
+  border-left: 6px solid #caa97a;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2 {
+  color: #5a4533;
+  margin-bottom: 16px;
+}
+
+.card ul {
+  padding-left: 20px;
+}
+
+.card ul li {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.character {
+  margin-bottom: 16px;
+}
+
+.character h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #3b2f25;
+}
+
+.character p {
+  margin: 4px 0 0;
+  color: #555;
+  line-height: 1.5;
+}
+
+.emotion p {
+  margin: 8px 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.past ul {
+  padding-left: 20px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.past ul li {
+  margin-bottom: 12px;
+  font-size: 1rem;
+}

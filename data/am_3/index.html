@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>野球の世界</title>
+  <style>
+    body {
+      font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #1e90ff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    section img {
+      width: 100%;
+      max-width: 600px;
+      display: block;
+      margin-top: 15px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .player-section {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .player-text {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .player-image {
+      flex: 0 0 auto;
+    }
+
+    .player-image img {
+      width: 200px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .mascot-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .mascot-item {
+      flex: 1 1 300px;
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    .mascot-item img {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+.mascot-images {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: flex-start; /* 高さを揃える */
+}
+
+.mascot-images img {
+  height: 150px;           /* 高さを固定 */
+  width: auto;             /* 横幅は自動で比率保持 */
+  border-radius: 8px;
+  object-fit: contain;     /* はみ出し防止（必要なら） */
+}
+
+
+    ul {
+      padding-left: 1.2em;
+    }
+
+    li {
+      margin-bottom: 1em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>野球の世界へようこそ</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">野球とは？</a></li>
+        <li><a href="#rules">基本ルール</a></li>
+        <li><a href="#players">有名選手</a></li>
+        <li><a href="#mascots">マスコット</a></li>
+        <li><a href="#infield">難しいルール</a></li>
+        <li><a href="#fun">楽しいところ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>野球とは？</h2>
+      <p>
+        野球は、バットとボールを使って行うチームスポーツで、アメリカや日本で非常に人気があります。
+        2つのチームが攻撃と守備を交互に行い、得点を競います。
+      </p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Baseball_pitch.jpg" alt="野球場の写真">
+    </section>
+
+    <section id="rules">
+      <h2>基本ルール</h2>
+      <ul>
+        <li>1チームは9人で構成される</li>
+        <li>攻撃側は3アウトになるまで打席に立てる</li>
+        <li>守備側はピッチャーがボールを投げてアウトを取る</li>
+        <li>試合は9回まで行われる（延長戦あり）</li>
+      </ul>
+    </section>
+ <section id="infield">
+      <h2>野球の難しいルール</h2>
+
+      <h3>インフィールドフライ</h3>
+      <p>
+        インフィールドフライとは、<strong>ノーアウトまたはワンアウト</strong>で、
+        <strong>ランナーが1塁と2塁（または満塁）</strong>のときに内野にフライが上がると適用されるルールです。
+      </p>
+      <p>
+        守備側がわざとボールを落としてダブルプレーを狙うのを防ぐため、
+        審判が「インフィールドフライ」と宣言した時点で<strong>打者は自動的にアウト</strong>になります。
+      </p>
+
+      <h3>ボーク（Balk）</h3>
+      <p>
+        ボークとは、ピッチャーが投球動作中に<strong>不正な動き</strong>をしたときに適用される反則です。
+        例えば、投球フォームに入って急に投げるのをやめたり、明らかに牽制するふりをして投げなかったりすると、
+        ボークが宣告され、<strong>ランナーは自動的に1つ進塁</strong>できます。
+      </p>
+
+      <h3>振り逃げ（Dropped Third Strike）</h3>
+      <p>
+        三振しても、キャッチャーが<strong>3ストライク目のボールを捕球できなかった</strong>場合、
+        打者は1塁へ走ることができます（1塁が空いている場合、または2アウト時のみ）。
+      </p>
+      <p>
+        このとき守備側は、打者をアウトにするには<strong>1塁へ送球するか、直接タッチ</strong>しなければなりません。
+      </p>
+
+      <h3>タッチアップ（Tag Up）</h3>
+      <p>
+        外野へのフライが捕球されたとき、ランナーは<strong>ベースに戻ってから進塁</strong>する必要があります。
+        これを「タッチアップ」と呼びます。
+      </p>
+      <p>
+        捕球後に素早くスタートすることで、<strong>犠牲フライ</strong>として得点や進塁が可能です。
+        ただし、早くスタートしすぎると<strong>アウトになる可能性</strong>があるため、タイミングが重要です。
+      </p>
+    </section>
+    <section id="players">
+      <h2>有名な選手</h2>
+      <div class="player-section">
+        <div class="player-text">
+          <ol>
+            <li>大谷翔平（日本）</li>
+            <li>イチロー（日本）</li>
+            <li>ベーブ・ルース（アメリカ）</li>
+          </ol>
+        </div>
+        <div class="player-image">
+          <img src="20240404_Ohtani6_Reuters.jpg" alt="大谷翔平の写真">
+        </div>
+      </div>
+    </section>
+
+    <section id="mascots">
+      <h2>各野球チームのマスコット</h2>
+      <p>野球チームにはそれぞれユニークなマスコットがいて、試合を盛り上げたり、ファンと交流したりします。</p>
+      <div class="mascot-list">
+        <div class="mascot-item">
+          <img src="20211224_doala_ay.jpg" alt="中日ドラゴンズのドアラ">
+          <h3>ドアラ（中日ドラゴンズ）</h3>
+          <p>かわいいドラゴンのキャラクターで、ユーモアあふれるパフォーマンスが人気です。</p>
+        </div>
+        <div class="mascot-item">
+          <div class="mascot-images">
+            <img src="637BM7TYFVPEZLYYXCW4V4KXYM.avif" alt="トラッキーの画像">
+            <img src="201404231549152235.jpg" alt="ラッキーの画像">
+          </div>
+          <h3>トラッキーとラッキー（阪神タイガース）</h3>
+          <p>トラッキーは虎のキャラクターで、ラッキーはその弟分。元気で親しみやすい存在です。</p>
+        </div>
+        <div class="mascot-item">
+          <img src="9-1.jpg" alt="ソフトバンクホークスのハリー">
+          <h3>ハリー（福岡ソフトバンクホークス）</h3>
+          <p>ホークスの公式マスコットで、鷹のキャラクター。元気で子供たちに人気があります。</p>
+        </div>
+        <div class="mascot-item">
+          <img src="images.jpg" alt="オリックス・バファローズのバファローブル">
+          <h3>バファローブル（オリックス・バファローズ）</h3>
+          <p>水牛をモチーフにしたマスコットで、力強くて愛らしいキャラクターとしてファンに愛されています。</p>
+        </div>
+      </div>
+    </section>
+
+   
+
+    <section id="fun">
+      <h2>野球の楽しいところ</h2>
+      <ul>
+        <li>
+          <strong>勝ったときの喜び：</strong>
+          苦しい試合を乗り越えて勝利した瞬間の喜びは格別です。
+          サヨナラ勝ちや逆転ホームランなど、ドラマのような展開がよくあります。
+        </li>
+        <li>
+          <strong>打ったときの爽快感：</strong>
+          バットにボールがクリーンヒットしたときの「カキーン！」という音と感触は、とても気持ちいいです。
+          打てたときの達成感がクセになります。
+        </li>
+        <li>
+          <strong>守備の緊張感と達成感：</strong>
+          フライをキャッチしたり、ゴロをうまくさばいてアウトを取ったときは、
+          自分がチームに貢献できたという嬉しさがあります。
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 野球情報サイト</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>マインクラフト入門ガイド</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.8;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+      color: #333;
+    }
+    header {
+      background: url('20211118182332.jpg') center/cover no-repeat;
+      color: white;
+      padding: 4em 2em;
+      text-align: center;
+      position: relative;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    header h1,
+    header p {
+      position: relative;
+      z-index: 1;
+    }
+    main {
+      padding: 2em;
+      max-width: 1000px;
+      margin: auto;
+      background: url('背景.jpg') center/cover no-repeat;
+      background-attachment: fixed;
+      position: relative;
+    }
+    h2 {
+      color: #2e8b57;
+      border-left: 5px solid #2e8b57;
+      padding-left: 0.5em;
+    }
+    .section-box, .creeper, table {
+      background-color: white;
+      padding: 1em;
+      margin-bottom: 1.5em;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 0.5em;
+      text-align: left;
+    }
+    .creeper {
+      text-align: center;
+    }
+    .creeper img {
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+    }
+    footer {
+      background-color: #2e8b57;
+      color: white;
+      text-align: center;
+      padding: 1em;
+      margin-top: 2em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>マインクラフト入門ガイド</h1>
+    <p>サバイバルモードを楽しく効率よく進めよう！</p>
+  </header>
+  <main>
+    <section class="section-box">
+      <h2>1. マインクラフトとは？</h2>
+      <p>世界中で人気のサンドボックスゲーム。ブロックでできた世界で、建築・冒険・生活を自由に楽しめます。</p>
+    </section>
+
+    <section class="section-box">
+      <h2>2. サバイバルモードとは？</h2>
+      <p>資源を集め、自分で道具や家を作り、食料を確保しながらモンスターを避けて生き延びるモードです。</p>
+    </section>
+
+    <section class="section-box">
+      <h2>3. サバイバルモードの進め方</h2>
+      <ul>
+        <li><strong>序盤：</strong> 木を切り、道具を作り、仮の家を建てる。</li>
+        <li><strong>中盤：</strong> 石・鉄を集めて装備を強化、洞窟探検や村の探索。</li>
+        <li><strong>後半：</strong> ダイヤモンドを手に入れてネザー・エンドへ進む。</li>
+      </ul>
+    </section>
+
+    <section class="section-box">
+      <h2>4. パソコン版の基本操作（Java Edition）</h2>
+      <table>
+        <tr><th>操作</th><th>キー</th><th>説明</th></tr>
+        <tr><td>前に進む</td><td>W</td><td>基本の移動</td></tr>
+        <tr><td>ジャンプ</td><td>スペース</td><td>段差を登る</td></tr>
+        <tr><td>しゃがむ</td><td>Shift</td><td>落下防止・静かに動く</td></tr>
+        <tr><td>ダッシュ</td><td>W 2回 / Ctrl</td><td>素早く移動</td></tr>
+        <tr><td>攻撃・壊す</td><td>左クリック</td><td>ブロックや敵を攻撃</td></tr>
+        <tr><td>置く・開く</td><td>右クリック</td><td>ブロック設置、ドアを開ける</td></tr>
+        <tr><td>持ち物</td><td>E</td><td>インベントリ表示</td></tr>
+        <tr><td>ホットバー切り替え</td><td>1〜9</td><td>持つアイテム変更</td></tr>
+        <tr><td>メニュー</td><td>Esc</td><td>一時停止・設定変更</td></tr>
+      </table>
+    </section>
+
+    <div class="creeper section-box">
+      <h2>クリーパーに注意！</h2>
+      <img src="クリーパー.jpg" alt="クリーパー">
+      <p>クリーパーは近づくと爆発する危険なモブです。静かに近づいてくるので、こまめに周囲を確認しましょう！</p>
+    </div>
+
+    <section class="section-box">
+      <h2>5. 効率よく進めるコツ</h2>
+      <ul>
+        <li>ベッドを早めに作って復活地点を確保</li>
+        <li>松明を用意してモンスター対策</li>
+        <li>食料は畑や動物で自給自足</li>
+        <li>村を探してアイテムを入手・交易</li>
+        <li>ダイヤで装備強化し、ネザー・エンドに挑む</li>
+      </ul>
+    </section>
+
+    <section class="section-box">
+      <h2>6. まとめ</h2>
+      <p>マインクラフトは自由に遊べて学べるゲームです。サバイバルモードでは自分で考え、行動して、工夫しながら強くなっていく楽しさを体験できます！</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 マインクラフト入門ガイド</p>
+  </footer>
+</body>
+</html>
