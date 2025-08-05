@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>チーズケーキ味のカルピス</title>
+  <style>
+    /* ------------------- 基本スタイル ------------------- */
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      margin: 0;
+      background: #ffffff;
+      color: #333;
+      line-height: 1.6;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* 背景水玉 */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 20% 20%, rgba(204,238,255,0.6) 10px, transparent 20px),
+                  radial-gradient(circle at 80% 30%, rgba(204,238,255,0.6) 8px, transparent 18px),
+                  radial-gradient(circle at 40% 70%, rgba(204,238,255,0.6) 12px, transparent 22px),
+                  radial-gradient(circle at 70% 80%, rgba(204,238,255,0.6) 6px, transparent 16px);
+      background-size: 200px 200px;
+      z-index: -1;
+      animation: bubbleMove 10s linear infinite alternate;
+    }
+    @keyframes bubbleMove {
+      0% { background-position: 0 0; }
+      100% { background-position: 50px 50px; }
+    }
+
+    header {
+      text-align: center;
+      background: #cceeff;
+      padding: 2rem 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      font-size: 2rem;
+      margin: 0;
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+    header p {
+      font-size: 1.2rem;
+      margin: 0.5rem 0 0;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    .hero img {
+      max-width: 280px;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+    }
+    .hero img:hover {
+      transform: scale(1.05);
+    }
+
+    .section {
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #cceeff;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+      animation: float 3s ease-in-out infinite;
+    }
+    .section p {
+      margin-bottom: 1rem;
+    }
+
+    /* featureカード */
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+    .feature {
+      background: #f0f8ff;
+      border-radius: 10px;
+      padding: 1rem;
+      flex: 1 1 250px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .feature:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .feature h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* 表 */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      background: #f9f9f9;
+    }
+    table th, table td {
+      border: 1px solid #ddd;
+      padding: 0.6rem;
+      text-align: center;
+    }
+    table th {
+      background: #e0f7ff;
+    }
+
+    /* 吹き出し＋アイコン */
+    .reviews {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .review-wrap {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+    }
+    /* 偶数は右寄せ */
+    .review-wrap:nth-child(even) {
+      flex-direction: row-reverse;
+      text-align: right;
+    }
+
+    /* アイコン画像 */
+    .review-wrap img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #cceeff;
+      background: #fff;
+    }
+
+    /* 吹き出し本体 */
+    .review {
+      position: relative;
+      background: #f0f8ff;
+      padding: 1rem;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      max-width: 70%;
+    }
+    .review::after {
+      content: "";
+      position: absolute;
+      left: -10px;
+      top: 15px;
+      width: 0;
+      height: 0;
+      border: 10px solid transparent;
+      border-right-color: #f0f8ff;
+    }
+    /* 偶数吹き出しは反転 */
+    .review-wrap:nth-child(even) .review {
+      background: #e0f7ff;
+    }
+    .review-wrap:nth-child(even) .review::after {
+      left: auto;
+      right: -10px;
+      border-right-color: transparent;
+      border-left-color: #e0f7ff;
+    }
+
+    /* 購入ボタン */
+    .buy-button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.8rem 1.2rem;
+      background: #3399ff;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .buy-button::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -50%;
+      width: 50%;
+      height: 100%;
+      background: rgba(255,255,255,0.4);
+      transform: skewX(-25deg);
+      transition: 0.5s;
+    }
+    .buy-button:hover::after {
+      left: 150%;
+    }
+    .buy-button:hover {
+      background: #0077cc;
+    }
+
+    footer {
+      text-align: center;
+      background: #cceeff;
+      padding: 1rem;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>チーズケーキ味のカルピス</h1>
+    <p>生クリーム専門店「Milk」監修の期間限定フレーバー</p>
+  </header>
+
+  <section class="hero">
+    <img src="ime-zi1.webp" alt="チーズケーキ味のカルピス">
+  </section>
+
+  <!-- 商品概要 -->
+  <section class="section">
+    <h2>商品概要</h2>
+    <p>
+      「生クリームチーズケーキ風味のカルピス」は、生クリーム専門店「Milk」が監修したスイーツ感覚の乳性飲料。
+      カルピスの爽やかな酸味と、チーズケーキのリッチなコクを同時に楽しめる期間限定商品です。
+    </p>
+    <div class="features">
+      <div class="feature">
+        <h3>容量</h3>
+        <p>500ml PETボトル</p>
+      </div>
+      <div class="feature">
+        <h3>価格</h3>
+        <p>約205円（税込）</p>
+      </div>
+      <div class="feature">
+        <h3>販売期間</h3>
+        <p>2024年11月19日〜 期間限定</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 味の特徴 -->
+  <section class="section">
+    <h2>味の特徴</h2>
+    <p>
+      チーズケーキのリッチなコクとカルピスならではの爽やかな甘酸っぱさが融合。
+      「飲むチーズケーキ」と評されるほど香り高く、スイーツ感覚で楽しめる味わいです。
+    </p>
+    <p>
+      コンビニやスーパーで見かけたら、ぜひ一度試してみてください！
+    </p>
+  </section>
+
+  <!-- 原材料・栄養成分 -->
+  <section class="section">
+    <h2>原材料・栄養成分（目安）</h2>
+    <p>※正確な情報はパッケージをご確認ください。</p>
+    <table>
+      <tr>
+        <th>エネルギー</th>
+        <th>たんぱく質</th>
+        <th>脂質</th>
+        <th>炭水化物</th>
+        <th>食塩相当量</th>
+      </tr>
+      <tr>
+        <td>48kcal</td>
+        <td>0.6g</td>
+        <td>0g</td>
+        <td>12g</td>
+        <td>0.03g</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- おすすめの楽しみ方 -->
+  <section class="section">
+    <h2>おすすめの楽しみ方</h2>
+    <ul>
+      <li>冷やしてそのまま飲むと爽やかスイーツドリンク</li>
+      <li>ホットにしてまろやかに、冬のデザートドリンクに</li>
+      <li>アイスやヨーグルトにかけてチーズケーキ風アレンジ</li>
+    </ul>
+  </section>
+
+  <!-- 他フレーバー比較 -->
+  <section class="section">
+    <h2>他のカルピスフレーバーとの比較</h2>
+    <table>
+      <tr>
+        <th>フレーバー</th>
+        <th>特徴</th>
+      </tr>
+      <tr>
+        <td>チーズケーキ</td>
+        <td>濃厚でスイーツ感たっぷり</td>
+      </tr>
+      <tr>
+        <td>白桃</td>
+        <td>やさしい甘さとフルーティーな香り</td>
+      </tr>
+      <tr>
+        <td>巨峰</td>
+        <td>ぶどうの甘酸っぱさが爽やか</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- みんなの感想（吹き出し＋アイコン） -->
+  <section class="section">
+    <h2>みんなの感想</h2>
+    <div class="reviews">
+      <div class="review-wrap">
+        <img src="woman20.png" alt="20代女性アイコン">
+        <div class="review">「チーズの香りがすごくリアルで、後味がカルピス！」（20代女性）</div>
+      </div>
+      <div class="review-wrap">
+        <img src="man30.png" alt="30代男性アイコン">
+        <div class="review">「甘酸っぱいのにコクがあって、まるで飲むスイーツ！」（30代男性）</div>
+      </div>
+      <div class="review-wrap">
+        <img src="student.png" alt="学生アイコン">
+        <div class="review">「ホットにしたらチーズケーキラテみたいで美味しい！」（10代学生）</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 購入リンク -->
+  <section class="section" style="text-align:center;">
+    <a href="#" class="buy-button">購入できるお店を探す</a>
+  </section>
+
+  <footer>
+    &copy; 2025 チーズケーキ味のカルピス紹介サイト
+  </footer>
+
+</body>
+</html>

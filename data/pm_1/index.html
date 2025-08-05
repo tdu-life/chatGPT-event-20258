@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>🎮マインクラフト完全ガイド🧱</title>
+  <style>
+    body {
+      font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+      background-color: #eef6f0;
+      color: #333;
+      margin: 0;
+      padding: 0 20px 40px 20px;
+      line-height: 1.8;
+    }
+    header {
+      background-color: #3c873a;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      animation: fadeIn 1.2s ease-out;
+    }
+    header h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+    }
+    nav {
+      max-width: 960px;
+      margin: 20px auto;
+      background: #fff;
+      border-radius: 8px;
+      padding: 15px 25px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease-out;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    nav li {
+      font-size: 1.1em;
+    }
+    nav a {
+      color: #3c873a;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+      cursor: pointer;
+    }
+    nav a:hover {
+      color: #2f6f2f;
+    }
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    h2 {
+      color: #2f6f2f;
+      border-left: 6px solid #3c873a;
+      padding-left: 12px;
+      margin-top: 60px;
+    }
+    section {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s ease-out forwards;
+    }
+    section:nth-of-type(1) { animation-delay: 0.3s; }
+    section:nth-of-type(2) { animation-delay: 0.5s; }
+    section:nth-of-type(3) { animation-delay: 0.7s; }
+    section:nth-of-type(4) { animation-delay: 0.9s; }
+    section:nth-of-type(5) { animation-delay: 1.1s; }
+    section:nth-of-type(6) { animation-delay: 1.3s; }
+    ul {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .gallery-item {
+      text-align: center;
+      animation: fadeIn 1s ease forwards;
+    }
+    .gallery-item:nth-child(1) { animation-delay: 1.5s; }
+    .gallery-item:nth-child(2) { animation-delay: 1.7s; }
+    .gallery-item:nth-child(3) { animation-delay: 1.9s; }
+    .gallery-item:nth-child(4) { animation-delay: 2.1s; }
+    .gallery-item:nth-child(5) { animation-delay: 2.3s; }
+    .gallery-item:nth-child(6) { animation-delay: 2.5s; }
+    .gallery img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .gallery-caption {
+      font-size: 0.95em;
+      margin-top: 8px;
+      color: #444;
+    }
+    .gallery-description {
+      margin-top: 25px;
+      font-size: 1.05em;
+      color: #555;
+      background: #f0f8f2;
+      padding: 20px;
+      border-left: 6px solid #3c873a;
+      border-radius: 6px;
+    }
+    footer {
+      background-color: #ddd;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      margin-top: 60px;
+      animation: fadeIn 1.2s ease-out;
+      animation-delay: 1.4s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎮 マインクラフト完全ガイド 🧱</h1>
+    <p>サバイバルも建築も自由自在！冒険の世界へ飛び込もう！🌍</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#intro">🎲 1. マインクラフトとは？</a></li>
+      <li><a href="#modes">🕹️ 2. ゲームモードの種類</a></li>
+      <li><a href="#redstone">🔧 3. レッドストーンでの自動化</a></li>
+      <li><a href="#building">🏰 4. 建築の楽しみ方</a></li>
+      <li><a href="#adventure">🧙‍♂️ 5. 冒険とボス戦</a></li>
+      <li><a href="#gallery">🖼 6. スクリーンショットギャラリー</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="intro">
+      <h2>🎲 マインクラフトとは？</h2>
+      <p>マインクラフトはスウェーデンのMojang Studiosが開発したサンドボックスゲームです。無限に生成されるブロックの世界で、採掘、建築、冒険など自由に遊べます。世界中の子どもから大人まで楽しめる人気ゲームです。</p>
+    </section>
+
+    <section id="modes">
+      <h2>🕹️ ゲームモードの種類</h2>
+      <ul>
+        <li><strong>サバイバルモード：</strong> 資源を集めて体力と空腹に気をつけながら冒険するモード</li>
+        <li><strong>クリエイティブモード：</strong> 無限の素材で自由に建築や実験ができるモード</li>
+        <li><strong>アドベンチャーモード：</strong> 他のユーザー作成のマップでRPGや謎解きが楽しめるモード</li>
+        <li><strong>スペクテイターモード：</strong> 透明になって自由に飛び回れる観察モード</li>
+      </ul>
+    </section>
+
+    <section id="redstone">
+      <h2>🔧 レッドストーンでの自動化</h2>
+      <p>レッドストーンは電気信号のように使える素材で、これを使って自動ドアや仕分け機、トラップなどの複雑な装置が作れます。まるでプログラミングのような楽しさがあります。</p>
+    </section>
+
+    <section id="building">
+      <h2>🏰 建築の楽しみ方</h2>
+      <p>自分だけの家や巨大な城、テーマパークを作ったり、友達と協力して街づくりをしたり、想像力を活かして多彩な建築を楽しめます。内装や外装にこだわるのも人気です。</p>
+    </section>
+
+    <section id="adventure">
+      <h2>🧙‍♂️ 冒険とボス戦</h2>
+      <p>危険なネザーやエンドの世界でボスモンスターを倒し、レアなアイテムをゲット。装備を整えて、挑戦的な冒険を楽しめます。マルチプレイなら協力プレイも盛り上がります。</p>
+    </section>
+
+    <section id="gallery">
+      <h2>🖼 スクリーンショットギャラリー</h2>
+      <p>プレイヤーが撮影したマインクラフトの美しい世界をお届けします。冒険のヒントや建築の参考にどうぞ！</p>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="minecraft_building.jpg" alt="巨大なファンタジー風のお城" />
+          <div class="gallery-caption">🏰 巨大なファンタジー風のお城</div>
+        </div>
+        <div class="gallery-item">
+          <img src="minecraft_cave.jpg" alt="深い洞窟の中の鉱石発見" />
+          <div class="gallery-caption">⛏️ 深い洞窟の中の鉱石発見</div>
+        </div>
+        <div class="gallery-item">
+          <img src="minecraft_nether.jpg" alt="炎のネザーの世界" />
+          <div class="gallery-caption">🔥 炎に包まれたネザーの世界</div>
+        </div>
+        <div class="gallery-item">
+          <img src="minecraft_end.jpg" alt="神秘的なエンドの空中島" />
+          <div class="gallery-caption">🌌 神秘的なエンドの空中島</div>
+        </div>
+        <div class="gallery-item">
+          <img src="minecraft_village.jpg" alt="村人が暮らす賑やかな村" />
+          <div class="gallery-caption">🏘️ 村人が暮らす賑やかな村</div>
+        </div>
+        <div class="gallery-item">
+          <img src="minecraft_redstone.jpg" alt="レッドストーン自動装置" />
+          <div class="gallery-caption">⚙️ レッドストーンを使った自動装置</div>
+        </div>
+      </div>
+      <div class="gallery-description">
+        これらの画像はマインクラフトの多彩な世界を表しています。建築の参考にしたり、冒険のイメージを膨らませたり、遊び方の幅を広げるヒントがたくさん詰まっています。ぜひあなたも新しい発見を楽しんでください！🌟
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 マインクラフトファンサイト | 作成者：あなた 🎉</p>
+  </footer>
+</body>
+</html>

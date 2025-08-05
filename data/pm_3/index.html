@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>ウィッシュミーメルについて</title>
+  <link rel="icon" href="red0007.png" type="image/png" />
+  <!-- Google Fonts 読み込み -->
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet" />
+  <style>
+    header {
+      background-color: #f0899d;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+      font-size: 1.8em;
+      font-weight: bold;
+      border-radius: 20px 20px 0 0;
+      box-shadow: 0 2px 8px #ffb6c1;
+      margin-bottom: 20px;
+    }
+    body {
+      font-family: "Hiragino Maru Gothic Pro", "Arial", sans-serif;
+      background-color: #fff0f5;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: #ffffffcc;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px #ffc0cb;
+    }
+
+    /* 「ウィッシュミーメル」のみM PLUS Rounded 1cフォントに */
+    .main-title {
+      font-family: "'M PLUS Rounded 1c', sans-serif";
+      text-align: center;
+      color: #ff69b4;
+      margin-top: 0;
+    }
+
+    img.main-image {
+      display: block;
+      margin: 0 auto 20px auto;
+      max-width: 100%;
+      border-radius: 20px;
+    }
+
+    .profile {
+      margin-top: 20px;
+      line-height: 1.8;
+    }
+
+    .section {
+      margin-top: 30px;
+    }
+
+    h2 {
+      border-bottom: 2px dotted #ffc0cb;
+      padding-bottom: 5px;
+    }
+
+    .hobby-heading {
+      color: #e9bcf7;
+    }
+
+    .food-heading {
+      color: #83daf7;
+    }
+
+    .treasure-heading {
+      color: #83f796;
+    }
+
+    .friend-heading {
+      color: #fff6a9;
+    }
+
+    ul {
+      list-style: heart;
+      padding-left: 20px;
+    }
+
+    .friend {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .friend-image {
+      width: 100px;
+      height: auto;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .friend-image:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #777;
+    }
+
+    /* モーダルのスタイル */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal.open {
+      display: flex;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    .modal-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 20px #fff;
+    }
+
+    .modal-content img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 15px;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+      user-select: none;
+      font-weight: bold;
+      text-shadow: 0 0 5px black;
+    }
+  </style>
+</head>
+<body>
+
+  <header>ウィッシュミーメルについて</header>
+
+  <div class="container">
+
+    <img src="JUoqoXXT_400x400.jpg" alt="ウィッシュミーメル" class="main-image" />
+    
+    <!-- ここだけM PLUS Rounded 1cフォント -->
+    <h1 class="main-title">ウィッシュミーメル</h1>
+
+    <div class="profile">
+      <p><strong>名前：</strong>ウィッシュミーメル（Wish me mell）</p>
+      <p><strong>誕生日：</strong>9月20日</p>
+      <p><strong>住んでいるところ：</strong>メルシーヒルズ</p>
+      <p><strong>性格：</strong>ちょっぴりとぼけているけど素直でやさしい心の持ち主</p>
+    </div>
+
+    <div class="section">
+      <h2 class="hobby-heading">好きなこと</h2>
+      <ul>
+        <li>お手紙を書くこと</li>
+        <li>切手を集めること</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2 class="food-heading">好きな食べ物</h2>
+      <ul>
+        <li>ホットケーキ</li>
+        <li>オムライス</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2 class="treasure-heading">宝物</h2>
+      <ul>
+        <li>お手紙</li>
+        <li>ルッツからもらったキーホルダー</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2 class="friend-heading">仲間</h2>
+
+      <div class="friend">
+        <img src="sub-wishmemell-chico.png" alt="チーコの画像" class="friend-image" data-full="sub-wishmemell-chico.png" />
+        <p><strong>チーコ：</strong>日本からやってきたネコの女の子。少しせっかちで、きまぐれ。イマドキのことと、空想することが大好き。</p>
+      </div>
+
+      <div class="friend">
+        <img src="sub-wishmemell-lutz.png" alt="ルッツの画像" class="friend-image" data-full="sub-wishmemell-lutz.png" />
+        <p><strong>ルッツ：</strong>ケニアからやってきたライオンの男の子。留学期間を終えてメルシーヒルズを去ってしまったけど、郵便屋になるきっかけをくれたルッツはメルにとって大切な存在。</p>
+      </div>
+
+      <div class="friend">
+        <img src="sub-wishmemell-maimai.png" alt="マイマイの画像" class="friend-image" data-full="sub-wishmemell-maimai.png" />
+        <p><strong>マイマイ：</strong>日本で大活躍中の歌姫。メルシーヒルズではピンクの子犬の姿になる。歌で気持ちを伝えて、みんなを元気づけることができる。妄想好きでおっとりした優しい性格。ピアノを弾くことと、スイカが大好き。</p>
+      </div>
+
+      <div class="friend">
+        <img src="sub-wishmemell-nina.png" alt="ニィナの画像" class="friend-image" data-full="sub-wishmemell-nina.png" />
+        <p><strong>ニィナ：</strong>北欧からやってきたドラゴンの女の子。メルとポコのひみつのタマゴから生まれたばかり。ちょっぴりわがままだけど、純粋で怖いもの知らず。</p>
+      </div>
+
+      <div class="friend">
+        <img src="sub-wishmemell-marin.png" alt="マリンの画像" class="friend-image" data-full="sub-wishmemell-marin.png" />
+        <p><strong>マリン：</strong>ハワイからやってきたカメの女の子。料理が得意で、食べることも大好き。お茶の時間とお風呂の時間を大切にしている。</p>
+      </div>
+    </div>
+
+    <footer>© サンリオ - ウィッシュミーメル紹介ページ</footer>
+  </div>
+
+  <!-- モーダル構造 -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+    <div class="modal-content">
+      <span class="modal-close" aria-label="閉じる">&times;</span>
+      <img src="" alt="" id="modal-image" />
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById("modal");
+    const modalImage = document.getElementById("modal-image");
+    const modalClose = modal.querySelector(".modal-close");
+
+    // 画像クリックでモーダル表示
+    document.querySelectorAll(".friend-image").forEach(img => {
+      img.addEventListener("click", () => {
+        const fullSrc = img.getAttribute("data-full");
+        const altText = img.getAttribute("alt");
+        modalImage.src = fullSrc;
+        modalImage.alt = altText;
+        modal.classList.add("open");
+        modal.focus();
+      });
+    });
+
+    // 閉じるボタン
+    modalClose.addEventListener("click", () => {
+      modal.classList.remove("open");
+      modalImage.src = "";
+      modalImage.alt = "";
+    });
+
+    // モーダル背景クリックで閉じる
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.classList.remove("open");
+        modalImage.src = "";
+        modalImage.alt = "";
+      }
+    });
+
+    // キーボードでESC押したら閉じる
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && modal.classList.contains("open")) {
+        modal.classList.remove("open");
+        modalImage.src = "";
+        modalImage.alt = "";
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+/* style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Rounded+Mplus+1c&display=swap');
+
+body {
+    font-family: 'Rounded Mplus 1c', 'ヒラギノ丸ゴ Pro', 'Hiragino Maru Gothic Pro', 'メイリオ', Meiryo, sans-serif;
+    background-color: #FFF8F0;
+    color: #4B3B2B;
+    margin: 0;
+    padding: 0 20px 40px 20px;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 30px 10px 20px;
+    background-color: #FFEBE8;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(255, 150, 150, 0.3);
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin: 0;
+    letter-spacing: 0.1em;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #A56969;
+    margin-top: 8px;
+}
+
+main {
+    max-width: 720px;
+    margin: 20px auto;
+}
+
+h2 {
+    font-size: 1.8rem;
+    border-bottom: 3px solid #FFB6B3;
+    padding-bottom: 6px;
+    margin-top: 40px;
+    color: #D14D4D;
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin-top: 25px;
+    color: #8B4B4B;
+}
+
+.kotowaza-list ul,
+.neko-no-te ul,
+.neko-kaburu ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.kotowaza-list li,
+.neko-no-te ul li,
+.neko-kaburu ul li {
+    background-color: #FFE7E5;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    padding: 10px 15px;
+    box-shadow: 1px 1px 4px rgba(255, 180, 180, 0.6);
+}
+
+.kotowaza-list li strong {
+    color: #D14D4D;
+    font-weight: 700;
+}
+
+.image {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.image img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(200, 120, 120, 0.3);
+    border: 2px solid #FFB6B3;
+}
+
+.conversation {
+    background-color: #FFF1F0;
+    border-left: 5px solid #FF8A85;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-style: italic;
+    color: #7A3E3D;
+}
+
+.conversation p {
+    margin: 6px 0;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 15px 10px;
+    color: #A56969;
+    font-size: 0.9rem;
+    border-top: 1px solid #FFCCCC;
+}
+
+/* スマホ対応 */
+@media (max-width: 480px) {
+    body {
+        padding: 10px 15px 30px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    main {
+        margin: 15px auto;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
